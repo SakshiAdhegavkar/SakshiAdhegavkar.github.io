@@ -1,52 +1,25 @@
+document.addEventListener("DOMContentLoaded", function () {
 
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#0b1120;
-    color:white;
-}
+    const buttons = document.querySelectorAll("button");
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    background:#111827;
-}
+    buttons.forEach(button => {
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
-}
+        button.addEventListener("mouseenter", () => {
 
-section{
-    padding:80px 60px;
-}
+            button.style.transform = "scale(1.08)";
 
-h1{
-    font-size:55px;
-}
+        });
 
-h2{
-    color:#38bdf8;
-}
+        button.addEventListener("mouseleave", () => {
 
-p{
-    font-size:22px;
-    max-width:700px;
-    line-height:1.6;
-}
+            button.style.transform = "scale(1)";
 
-button{
-    padding:15px 30px;
-    margin-right:20px;
-    margin-top:20px;
-    border:none;
-    border-radius:8px;
-    background:#38bdf8;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-}
+        });
+
+    });
+
+    console.log("Portfolio Loaded Successfully");
+
+});
+
+ 
